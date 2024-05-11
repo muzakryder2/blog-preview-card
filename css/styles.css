@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --white: #ffffff;
+  --grey: #808080;
+  --black: #121212;
+  --yellow: #f4d04e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 500;
+  background-color: var(--yellow);
+  padding: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--white);
+  width: 327px;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card-details__category {
+  background: var(--yellow);
+  font-weight: 800;
+  width: 73px;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.card-details__pubDate {
+  font-size: 12px;
+}
+
+.card-details__title {
+  font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--yellow);
+  }
+}
+
+.card-details__description {
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.author {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+.author__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author__name {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 415px) {
+  .card {
+    width: 384px;
+  }
+
+  .card-details {
+    width: 336px;
+  }
+
+  .card-details__category {
+    font-size: 14px;
+    width: 82px;
+  }
+
+  .card-details__pubDate {
+    font-size: 14px;
+  }
+
+  .card-details__title {
+    font-size: 23px;
+  }
+
+  .card-details__description {
+    font-size: 16px;
+    width: 92%;
+  }
+}
